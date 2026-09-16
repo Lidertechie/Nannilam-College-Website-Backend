@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Contacting Us</title>
+    <style>
+        @media only screen and (max-width: 650px) {
+            .container { width: 100% !important; }
+            .pad { padding: 30px 24px !important; }
+            .header-pad { padding: 30px 24px !important; }
+        }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;background:#eef1f6;font-family:Arial,Helvetica,sans-serif;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+    We have received your enquiry and will respond shortly.
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:40px 15px;background:#eef1f6;">
+    <tr>
+        <td align="center">
+
+            <table role="presentation" class="container" width="640" cellpadding="0" cellspacing="0"
+                   style="background:#ffffff;border:1px solid #d9e0ea;">
+
+                <!-- ================= HEADER / LETTERHEAD ================= -->
+                <tr>
+                    <td class="header-pad" align="center" style="background:#0b4ea2;padding:34px 35px 28px;">
+                        <img src="https://res.cloudinary.com/dn8zkmwt1/image/upload/v1789536192/zq6jhner9emaffbxkril.jpg"
+                             alt="Government Arts And Science College Logo"
+                             style="width:110px;height:auto;display:block;margin:0 auto;">
+
+                        <h1 style="margin:18px 0 6px;color:#ffffff;font-size:20px;font-weight:bold;letter-spacing:0.3px;">
+                            GOVERNMENT ARTS AND SCIENCE COLLEGE
+                        </h1>
+
+                        <p style="margin:0;color:#dbeafe;font-size:13px;line-height:19px;">
+                            Affiliated to Bharathidasan University, Tiruchirappalli &mdash; Tamil Nadu
+                        </p>
+                        <p style="margin:2px 0 0;color:#dbeafe;font-size:13px;">
+                            Nannilam &ndash; 610105
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height:3px;line-height:3px;font-size:0;background:#083a7d;">&nbsp;</td>
+                </tr>
+
+                <!-- ================= BODY ================= -->
+                <tr>
+                    <td class="pad" style="padding:44px 48px;">
+
+                        <p style="font-size:12.5px;color:#8a93a3;letter-spacing:0.5px;margin:0 0 22px;
+                                  text-transform:uppercase;">
+                            Acknowledgement of Enquiry
+                        </p>
+
+                        <h2 style="color:#0b4ea2;margin:0 0 22px;font-size:21px;font-weight:bold;">
+                            Thank You for Contacting Us
+                        </h2>
+
+                        <p style="font-size:15px;color:#333;margin:0 0 16px;">
+                            Dear <strong th:text="${name}">Student</strong>,
+                        </p>
+
+                        <p style="font-size:14.5px;color:#4a5160;line-height:25px;margin:0 0 16px;">
+                            Thank you for reaching out to Government Arts and Science College, Nannilam.
+                            We confirm that your enquiry has been received and recorded successfully.
+                        </p>
+
+                        <p style="font-size:14.5px;color:#4a5160;line-height:25px;margin:0 0 30px;">
+                            Our office will review the details you have shared and respond at the
+                            earliest opportunity. If your enquiry is urgent, please feel free to
+                            contact the college office directly during working hours using the
+                            details below.
+                        </p>
+
+                        <!-- Divider -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+                            <tr><td style="border-top:1px solid #e2e6ee;font-size:0;line-height:0;">&nbsp;</td></tr>
+                        </table>
+
+                        <!-- College Contact -->
+                        <p style="margin:0 0 12px;font-size:12px;font-weight:bold;color:#0b4ea2;
+                                  text-transform:uppercase;letter-spacing:0.5px;">
+                            College Office
+                        </p>
+
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding:3px 0;font-size:14px;color:#4a5160;line-height:23px;">
+                                    <strong style="color:#333;">Email&nbsp;&nbsp;</strong>
+                                    <a href="mailto:gascnannilam2023@gmail.com" style="color:#0b4ea2;text-decoration:none;">
+                                        gascnannilam2023@gmail.com
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:3px 0;font-size:14px;color:#4a5160;line-height:23px;">
+                                    <strong style="color:#333;">Phone&nbsp;&nbsp;</strong>
+                                    +91 4366 296270
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:3px 0;font-size:14px;color:#4a5160;line-height:23px;">
+                                    <strong style="color:#333;">Address</strong><br>
+                                    Thiruvarur Main Road, EB Office Opposite,
+                                    Nannilam &ndash; 610105, Tamil Nadu, India
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0 0;">
+                            <tr><td style="border-top:1px solid #e2e6ee;font-size:0;line-height:0;">&nbsp;</td></tr>
+                        </table>
+
+                        <p style="font-size:14.5px;color:#4a5160;line-height:24px;margin:26px 0 0;">
+                            Warm Regards,<br><br>
+                            <strong style="color:#0b4ea2;">Government Arts and Science College</strong><br>
+                            Nannilam, Tamil Nadu
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- ================= FOOTER ================= -->
+                <tr>
+                    <td align="center" style="background:#0b4ea2;color:#ffffff;padding:20px;">
+                        <p style="margin:0;font-size:12px;color:#dbeafe;">
+                            This is an automated acknowledgement email. Please do not reply to this message.
+                        </p>
+                        <p style="margin:6px 0 0;font-size:12px;color:#dbeafe;">
+                            &copy; 2026 Government Arts and Science College, Nannilam. All Rights Reserved.
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Us Message</title>
+    <style>
+        @media only screen and (max-width: 650px) {
+            .container { width: 100% !important; }
+            .pad { padding: 30px 24px !important; }
+            .header-pad { padding: 26px 24px !important; }
+            td.label-col, td.value-col { display:block !important; width:100% !important; }
+            td.label-col { padding-bottom:2px !important; }
+            td.value-col { padding-top:0 !important; padding-bottom:14px !important; }
+        }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;background:#eef1f6;font-family:Arial,Helvetica,sans-serif;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+    A new enquiry has been submitted via the Contact Us form.
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:40px 15px;background:#eef1f6;">
+    <tr>
+        <td align="center">
+
+            <table role="presentation" class="container" width="640" cellpadding="0" cellspacing="0"
+                   style="background:#ffffff;border:1px solid #d9e0ea;">
+
+                <!-- ================= HEADER ================= -->
+                <tr>
+                    <td class="header-pad" align="center" style="background:#0b4ea2;padding:28px 35px 24px;">
+                        <img src="https://res.cloudinary.com/dn8zkmwt1/image/upload/v1789536192/zq6jhner9emaffbxkril.jpg"
+                             alt="Government Arts And Science College Logo"
+                             style="width:90px;height:auto;display:block;margin:0 auto;">
+
+                        <h1 style="margin:14px 0 4px;color:#ffffff;font-size:18px;font-weight:bold;letter-spacing:0.3px;">
+                            NEW CONTACT US MESSAGE
+                        </h1>
+
+                        <p style="margin:0;color:#dbeafe;font-size:13px;">
+                            Government Arts and Science College, Nannilam
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height:3px;line-height:3px;font-size:0;background:#083a7d;">&nbsp;</td>
+                </tr>
+
+                <!-- ================= BODY ================= -->
+                <tr>
+                    <td class="pad" style="padding:42px 48px;">
+
+                        <p style="font-size:12.5px;color:#8a93a3;letter-spacing:0.5px;margin:0 0 22px;
+                                  text-transform:uppercase;">
+                            Internal Notification
+                        </p>
+
+                        <h2 style="color:#0b4ea2;margin:0 0 10px;font-size:20px;font-weight:bold;">
+                            New Enquiry Received
+                        </h2>
+
+                        <p style="font-size:14px;color:#666;line-height:22px;margin:0 0 28px;">
+                            A visitor has submitted the Contact Us form on the college website.
+                            Details are recorded below.
+                        </p>
+
+                        <!-- ================= USER DETAILS ================= -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                               style="border-collapse:collapse;margin-bottom:28px;">
+                            <tr>
+                                <td class="label-col" style="padding:12px 0;width:110px;font-weight:bold;
+                                           color:#333;font-size:13.5px;border-bottom:1px solid #e2e6ee;vertical-align:top;">
+                                    Name
+                                </td>
+                                <td class="value-col" style="padding:12px 0;color:#4a5160;font-size:14.5px;
+                                           border-bottom:1px solid #e2e6ee;" th:text="${name}">
+                                    Student Name
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-col" style="padding:12px 0;font-weight:bold;color:#333;
+                                           font-size:13.5px;border-bottom:1px solid #e2e6ee;vertical-align:top;">
+                                    Email
+                                </td>
+                                <td class="value-col" style="padding:12px 0;color:#4a5160;font-size:14.5px;
+                                           border-bottom:1px solid #e2e6ee;">
+                                    <a th:href="'mailto:' + ${email}" th:text="${email}"
+                                       style="color:#0b4ea2;text-decoration:none;">student@gmail.com</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-col" style="padding:12px 0;font-weight:bold;color:#333;
+                                           font-size:13.5px;vertical-align:top;">
+                                    Mobile
+                                </td>
+                                <td class="value-col" style="padding:12px 0;color:#4a5160;font-size:14.5px;">
+                                    <a th:href="'tel:' + ${mobile}" th:text="${mobile}"
+                                       style="color:#0b4ea2;text-decoration:none;">9876543210</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- ================= MESSAGE ================= -->
+                        <p style="margin:0 0 10px;font-size:12px;font-weight:bold;color:#0b4ea2;
+                                  text-transform:uppercase;letter-spacing:0.5px;">
+                            Message
+                        </p>
+
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                               style="background:#f7f8fa;border:1px solid #e2e6ee;margin-bottom:30px;">
+                            <tr>
+                                <td style="padding:18px 20px;color:#4a5160;font-size:14.5px;line-height:24px;
+                                           white-space:pre-wrap;" th:text="${message}">
+                                    User submitted message content appears here.
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:22px;">
+                            <tr><td style="border-top:1px solid #e2e6ee;font-size:0;line-height:0;">&nbsp;</td></tr>
+                        </table>
+
+                        <p style="font-size:13.5px;color:#8a93a3;line-height:21px;margin:0;">
+                            Please review this enquiry and respond to the sender directly if required.
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- ================= FOOTER ================= -->
+                <tr>
+                    <td align="center" style="background:#0b4ea2;color:#ffffff;padding:18px;">
+                        <p style="margin:0;font-size:12px;color:#dbeafe;">
+                            Government Arts and Science College, Nannilam
+                        </p>
+                        <p style="margin:6px 0 0;font-size:12px;color:#dbeafe;">
+                            This is an automated system notification.
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
