@@ -21,7 +21,9 @@ public class CorsConfig {
                 "http://localhost:5174",
                 "http://localhost:5173",
                 "https://vbk0n794-3000.inc1.devtunnels.ms",
-                "https://vbk0n794-5174.inc1.devtunnels.ms"
+                "https://vbk0n794-5174.inc1.devtunnels.ms",
+                "https://gascnnm.in",
+                "https://www.gascnnm.in"
         ));
 
         configuration.setAllowedMethods(List.of(
