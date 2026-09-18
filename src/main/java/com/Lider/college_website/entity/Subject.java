@@ -3,6 +3,9 @@ package com.Lider.college_website.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,4 +29,12 @@ public class Subject extends Auditable {
     @Builder.Default
     @Column(nullable = false)
     private boolean active = true;
+
+    @OneToMany(
+            mappedBy = "subject",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<SubjectAllocation> allocations = new ArrayList<>();
 }
