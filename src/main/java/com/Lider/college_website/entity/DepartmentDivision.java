@@ -4,6 +4,9 @@ import com.Lider.college_website.enums.CourseCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,5 +34,13 @@ public class DepartmentDivision extends Auditable {
     @Builder.Default
     @Column(nullable = false)
     private boolean active = true;
+
+    @OneToMany(
+            mappedBy = "departmentDivision",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<Course> courses = new ArrayList<>();
 
 }
