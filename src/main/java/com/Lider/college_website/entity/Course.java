@@ -4,6 +4,9 @@ import com.Lider.college_website.enums.CourseCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -34,4 +37,20 @@ public class Course extends Auditable {
     @Builder.Default
     @Column(nullable = false)
     private boolean active = true;
+
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<Subject> subjects = new ArrayList<>();
+
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<Cell> cells = new ArrayList<>();
 }
